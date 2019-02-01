@@ -6,9 +6,35 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #282c34;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.wrapper {
+  margin: auto;
+  padding: 4% 20%;
+}
+
+.rsg-github {
+  color: #f3f3f3;
+  padding: 2%;
+  background-color: #282c34;
+}
+
+.rsg-github-repo {
+  background-color: #1f2228;
+  padding: 100px;
+  color: #f3f3f3;
+  border: none;
+}
+
+h2 {
+  color: #f3f3f3;
+  text-align: center;
+  font-size: 42px;
+  letter-spacing: 5px;
 }
