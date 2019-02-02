@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Github } from 'react-social-github';
 
-var ApiGithub = require('api-github'), api = new ApiGithub({});
-var repos = api.users.getRepos('kzolt');
+//var ApiGithub = require('api-github'), api = new ApiGithub({});
+//var repos = api.users.getRepos('kzolt');
 
 class Projects extends Component {
   render() {
