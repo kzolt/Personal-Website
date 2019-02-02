@@ -5,6 +5,8 @@ import Projects from './Projects'
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 
+require('bootstrap');
+
 ReactDOM.render(<App />, document.getElementById('root'));
 ReactDOM.render(<Projects />, document.getElementById('projects'));
 

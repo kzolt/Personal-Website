@@ -14,11 +14,6 @@ code {
     monospace;
 }
 
-.wrapper {
-  margin: auto;
-  padding: 4% 20%;
-}
-
 .rsg-github {
   color: #f3f3f3;
   padding: 2%;
@@ -27,7 +22,7 @@ code {
 
 .rsg-github-repo {
   background-color: #1f2228;
-  padding: 100px;
+  padding: 5%;
   color: #f3f3f3;
   border: none;
 }
@@ -37,4 +32,8 @@ h2 {
   text-align: center;
   font-size: 42px;
   letter-spacing: 5px;
+}
+
+@media (max-width: 600px) {
+  
 }
