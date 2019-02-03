@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Projects from './projects'
+import Projects from './Projects'
 import Contact from './contact';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
