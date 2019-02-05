@@ -1,4 +1,10 @@
 import React, { Component } from 'react';
+import loading from './loading.gif'
+
+/*********************************
+ * TODO: FIX THIS
+ * Data being retreived, but not rendering
+ *********************************/
 
 const Octokit = require('@octokit/rest')
 const octokit = new Octokit ()
@@ -18,7 +24,8 @@ class Projects extends Component
   componentDidMount() {
     octokit.repos.listForUser({
       username: 'kzolt',
-      type: 'all'
+      type: 'all',
+      sort: 'pushed'
     }).then(({ data, status, headers }) => {
       // handle data
       console.log(status);
@@ -27,12 +34,12 @@ class Projects extends Component
       for (var i = 0; i < count; i++)
       {
         items.push(
-          <div className="col-sm">
+          <div className="col-sm p-3">
             <div className="card text-white text-center bg-dark">
               <div className="card-body">
                 <h5 className="card-title">{data[i].name}</h5>
                 <p className="card-text">{data[i].description}</p>
-                <a href={data[i].html_url} className="btn btn-light" target="_blank">View Source</a>
+                <a href={data[i].html_url} className="btn btn-outline-light">View Source</a>
               </div>
             </div>
           </div>);
@@ -46,14 +53,13 @@ class Projects extends Component
   render() {
     return (
       <div>
-        {this.state.loading ? (<div class="text-white">loading...</div>) : (
+        {this.state.loading ? (<img class="mx-auto d-block" src={loading} alt="loading..." />) : (
           <div>
             <div class="row">
               {items[0]}
               {items[1]}
               {items[2]}
             </div>
-            <div class="wrapper"></div>
             <div class="row">
               {items[3]}
               {items[4]}
