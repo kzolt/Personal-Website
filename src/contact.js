@@ -1,5 +1,17 @@
 import React, { Component } from 'react';
 
+const sendgrid = require('@sendgrid/mail');
+sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
+
+const msg = {
+    to: "hello@kzoltany.me",
+    from: "no-reply@kzoltany.me",
+    subject: "This is a test email",
+    text: "TEST",
+    html: "<h1>TEST<h1>"
+};
+sendgrid.send(msg);
+
 class Contact extends Component
 {
     render()
