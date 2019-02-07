@@ -1,18 +1,12 @@
 import React, { Component } from 'react';
 import loading from './loading.gif'
 
-/*********************************
- * TODO: FIX THIS
- * Data being retreived, but not rendering
- *********************************/
-
 const Octokit = require('@octokit/rest')
 const octokit = new Octokit ()
 var count = 6;
 
 var items = [];
 
-// TODO: Follow Principles of DRY
 class Projects extends Component
 {
 
