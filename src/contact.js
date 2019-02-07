@@ -62,7 +62,14 @@ class Contact extends Component
 
     render()
     {
-        return (
+        return this.state.sent ? (
+        <div className="text-center">
+            <div className="p-3">
+                <h4 className="text-white">Your Message Has Been Sent!</h4>
+                <p className="text-white">Thank you.</p>
+            </div>
+        </div>)
+         : (
             <form>
             <div className="form-group">
             <label for="user_name">Name</label>
